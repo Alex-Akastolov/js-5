@@ -75,18 +75,18 @@ function createStyle() {
     let styleCode = `
     .controls,
     .slides {
-        position: relative;
-    },
+      position: relative;
+    }
     .indicators {
-        display: flex;
-    },
+      display: flex;
+    }
     .indicators__item {
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-color: gray;
-        margin: 5px;
-        border-radius: 10px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: gray;
+      margin: 5px;
+      border-radius: 10px;
     }`;
     styleContainer.innerHTML = styleCode;
     container.appendChild(styleContainer)
@@ -107,8 +107,10 @@ function setListener() {
     indicatorsContainer.addEventListener('click', indicatorsHandler)
 }
 
-function createCarousel(slidesCount = 6) {
-    createContainer()
+function createCarousel(slidesCount = 5) {
+    // createContainer()
+    container = document.querySelector('#carousel');
+
     createSlides(slidesCount)
     createIndicators(slidesCount)
     createControls()
